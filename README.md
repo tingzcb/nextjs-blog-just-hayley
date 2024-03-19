@@ -15,6 +15,8 @@ pnpm dev
 bun dev
 ```
 
+Next.js  App router full course with MongoDB 
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
@@ -39,3 +41,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # nextjs-blog-just-hayley
 Next.js Full stack website for blog part
 >>>>>>> 7ff80619bd07e5251d6d5eef987ab36f2f0fcf5d
+
+
+
+
+
+
+
+
+
+
