@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ScrollingText from "./ScrollingText";
 import PageLayout from "./pageLayout";
+import ModeToggle from "./modeToggle";
 
 type Props = {};
 
@@ -38,6 +39,8 @@ const Navbar = (props: Props) => {
             订阅 mailchimp
           </p>
         </Link>
+
+        <ModeToggle />
 
         {/* <div className="flex items-center">
           <ThemeToggle className="mr-4" />
