@@ -1,3 +1,4 @@
+import Featured from "@/components/Featured";
 import ScrollingText from "@/components/ScrollingText";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,7 +19,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 ">
+    <div className="container mx-auto  ">
+      <Featured></Featured>
       <h1>hello world</h1>
       <Button>hello </Button>
       {/* <ScrollingText></ScrollingText> */}
@@ -29,60 +31,7 @@ export default function Home() {
           <p>View past quiz attempts.</p>
         </CardContent>
       </Card>
-      <Card className="text-sm text-muted-foreground">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
-      <Card className="text-sm text-muted-foreground ">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
-      <Card className="text-sm text-muted-foreground">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
-      <Card className="text-sm text-muted-foreground">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
-      <Card className="text-sm text-muted-foreground">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
-      <Card className="text-sm text-muted-foreground">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
-      <Card className="text-sm text-muted-foreground">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
-      <Card className="text-sm text-muted-foreground">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
-      <Card className="text-sm text-muted-foreground">
-        <CardTitle className="text-2xl font-bold">History</CardTitle>
-        <CardContent>
-          <p>View past quiz attempts.</p>
-        </CardContent>
-      </Card>
+
       <Card className="text-sm text-muted-foreground">
         <CardTitle className="text-2xl font-bold">History</CardTitle>
         <CardContent>
