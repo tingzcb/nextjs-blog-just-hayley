@@ -28,8 +28,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar></Navbar>
-          <PageLayout></PageLayout>
-          {children}{" "}
+          {children}
+          {/* <PageLayout></PageLayout> */}
         </ThemeProvider>
       </body>
     </html>
