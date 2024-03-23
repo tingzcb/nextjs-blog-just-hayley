@@ -1,3 +1,5 @@
+import CardList from "@/components/CardList";
+import CategoryList from "@/components/CategoryList";
 import Featured from "@/components/Featured";
 import ScrollingText from "@/components/ScrollingText";
 import { Button } from "@/components/ui/button";
@@ -21,6 +23,9 @@ export default function Home() {
   return (
     <div className="container mx-auto  ">
       <Featured></Featured>
+      <CategoryList></CategoryList>
+      <CardList></CardList>
+
       <h1>hello world</h1>
       <Button>hello </Button>
       {/* <ScrollingText></ScrollingText> */}
