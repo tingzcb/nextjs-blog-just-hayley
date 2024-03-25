@@ -1,6 +1,7 @@
 import React from "react";
 
 import Cards from "./Card";
+import Pagination from "./Pagination";
 
 type Props = {};
 
@@ -14,6 +15,7 @@ const CardList = (props: Props) => {
         <Cards></Cards>
         <Cards></Cards>
       </div>
+      <Pagination></Pagination>
     </div>
   );
 };

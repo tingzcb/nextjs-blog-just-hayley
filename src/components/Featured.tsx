@@ -1,26 +1,27 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import Pagination from "./Pagination";
 
 type Props = {};
 
 const Featured = (props: Props) => {
   return (
-    <div className="container max-w-5xl my-0 mx-auto  text-center">
+    <div className="container  my-0 mx-auto  text-center">
       <h1 className="title p-6 text-4xl">
         <b>Hey, hayley's blogs are here!</b> Discover my creative designs
         please!
       </h1>
-      <div className="post grid grid-cols-2 ">
-        <div className="imgContainer columns-3xs">
+      <div className="post grid grid-cols-3 gap-4">
+        <div className="imgContainer ">
           <img
-            src="/tiktok.png"
-            alt="faeature image"
-            className="rounded-lg w-80 h-80"
+            src="/Island.jpg"
+            alt="feature image"
+            className="rounded-lg w-120 h-120"
           ></img>
         </div>
 
-        <div className="txtContainer ">
+        <div className="txtContainer col-span-2  ">
           <h1 className="postTitle p-6  ">
             {" "}
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -42,10 +43,11 @@ const Featured = (props: Props) => {
             odio nobis, laborum dolores nisi facilis. Hic velit dolorum autem
             distinctio pariatur ipsam.
           </p>
-          <Button>Read More</Button>
+          <div className="p-4">
+            <Button>Read More</Button>
+          </div>
         </div>
       </div>
-      Featured, the last line of teature component-------------
     </div>
   );
 };
