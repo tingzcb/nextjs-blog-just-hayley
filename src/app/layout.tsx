@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import PageLayout from "@/components/pageLayout";
 import { ThemeProvider } from "@/components/themeProvider";
-import AuthProvider from "@/providers/AuthProvider";
-import AuthLinks from "@/components/AuthLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,20 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(inter.className, "antialiased min-h-screen pt-16")}>
-        <AuthProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {/* <Navbar></Navbar> */}
-
-            <AuthLinks></AuthLinks>
-            {children}
-            {/* <PageLayout></PageLayout> */}
-          </ThemeProvider>
-        </AuthProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar></Navbar>
+          {children}
+          {/* <PageLayout></PageLayout> */}
+        </ThemeProvider>
       </body>
     </html>
   );
