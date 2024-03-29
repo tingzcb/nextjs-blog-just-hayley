@@ -9,7 +9,7 @@ const Login = (props: Props) => {
   const { data, status } = useSession();
   console.log(data, status);
   return (
-    <div className="container  grid grid-rows-3 gap-4 justify-center mt-40 h-80 w-1/2 items-center bg-gray-200">
+    <div className="container  grid grid-rows-3 gap-4 justify-center mt-40 h-80 w-1/2 items-center bg-gray-200  dark:bg-slate-800">
       <div>
         {" "}
         <Button
@@ -19,7 +19,9 @@ const Login = (props: Props) => {
         >
           Sign in with Google
         </Button>
-        {/* <button onClick={() => signOut()}>Sign out</button> */}
+      </div>
+      <div className="">
+        <Button onClick={() => signOut()}>Sign out</Button>
       </div>
       <div>
         {" "}

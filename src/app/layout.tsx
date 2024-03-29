@@ -23,8 +23,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(inter.className, "antialiased min-h-screen pt-16")}>
         <AuthProvider>
-          <Navbar></Navbar>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar></Navbar>
+            {children}
+          </ThemeProvider>
         </AuthProvider>
       </body>
     </html>
