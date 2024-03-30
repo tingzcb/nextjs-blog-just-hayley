@@ -20,9 +20,9 @@ const Login = (props: Props) => {
           Sign in with Google
         </Button>
       </div>
-      <div className="">
+      {/* <div className="">
         <Button onClick={() => signOut()}>Sign out</Button>
-      </div>
+      </div> */}
       <div>
         {" "}
         <Button>Sign in with Github</Button>
