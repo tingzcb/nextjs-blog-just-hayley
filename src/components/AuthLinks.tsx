@@ -58,27 +58,57 @@ const AuthLinks = (props: Props) => {
         {open && (
           <div className="responsiveMenu ">
             {" "}
-            <Link href={"/"} className="flex items-center gap-2">
+            <Link
+              href={"/"}
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="flex items-center gap-2"
+            >
               <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
                 Just Hayley
               </p>
             </Link>
-            <Link href={"/merchandise"} className="flex items-center gap-2">
+            <Link
+              href={"/merchandise"}
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="flex items-center gap-2"
+            >
               <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
                 商品 merchandise
               </p>
             </Link>
-            <Link href={"/myBlog"} className="flex items-center gap-2">
+            <Link
+              href={"/myBlog"}
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="flex items-center gap-2"
+            >
               <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
                 my blog for life
               </p>
             </Link>
-            <Link href={"/aboutMe"} className="flex items-center gap-2">
+            <Link
+              href={"/aboutMe"}
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="flex items-center gap-2"
+            >
               <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
                 about me
               </p>
             </Link>
-            <Link href={"/mailchimp"} className="flex items-center gap-2">
+            <Link
+              href={"/mailchimp"}
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="flex items-center gap-2"
+            >
               <p
                 className="rounded-lg border-2 
               border-b-4 border-r-4 border-black px-2 py-1 text-xl 
@@ -88,10 +118,23 @@ const AuthLinks = (props: Props) => {
               </p>
             </Link>
             {status === "unauthenticated" ? (
-              <Link href="/login">Login1-2</Link>
+              <Link
+                href="/login"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                Login1-2
+              </Link>
             ) : (
               <>
-                <Link className="flex items-center gap-2" href="/write">
+                <Link
+                  className="flex items-center gap-2 "
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                  href="/write"
+                >
                   <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] dark:border-white">
                     Write A New Blog
                   </p>
@@ -99,6 +142,8 @@ const AuthLinks = (props: Props) => {
                 <Button
                   className=""
                   onClick={() => {
+                    setOpen(false);
+
                     signOut();
                   }}
                 >
