@@ -8,9 +8,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
-const MyBlog = (props: Props) => {
+const MyBlog = ({
+  searchParams
+}: {
+  searchParams: { page: number | undefined };
+}) => {
+  const page = searchParams.page || 1;
   return (
     <div className="container mx-auto  ">
       <Button>
@@ -22,7 +25,7 @@ const MyBlog = (props: Props) => {
       <div className=" flex">
         <div className="flex-initial ">
           {" "}
-          <CardList></CardList>
+          <CardList page={page}></CardList>
         </div>
 
         <div className="flex-initial w-96">

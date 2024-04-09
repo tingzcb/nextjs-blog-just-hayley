@@ -1,3 +1,4 @@
+import { NextPage } from "next";
 import CardList from "@/components/CardList";
 import CategoryList from "@/components/CategoryList";
 import Featured from "@/components/Featured";
@@ -14,7 +15,13 @@ import {
   CardTitle
 } from "@/components/ui/card";
 
-export default function Home() {
+export default function Home({
+  searchParams
+}: {
+  searchParams: { page: number | undefined };
+}) {
+  const page = searchParams.page || 1;
+  // console.log("page is ", page);
   return (
     <div className="container mx-auto  ">
       <Featured></Featured>
@@ -23,7 +30,7 @@ export default function Home() {
       <div className=" flex">
         <div className="flex-initial ">
           {" "}
-          <CardList></CardList>
+          <CardList page={page}></CardList>
         </div>
 
         <div className="flex-initial w-96">

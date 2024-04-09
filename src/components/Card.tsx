@@ -1,11 +1,17 @@
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
+type Props = {
+  item: any;
+  key: any;
+};
 
-const Cards = (props: Props) => {
+const Cards = ({ item, key }: Props) => {
   return (
-    <div className="grid grid-cols-2 max-w-3xl p-4 my-2 rounded-lg gap-8">
+    <div
+      className="grid grid-cols-2 max-w-3xl p-4 my-2 rounded-lg gap-8"
+      key={key}
+    >
       <div className="imageContainer">
         <img
           src="/Island.jpg"
@@ -20,9 +26,7 @@ const Cards = (props: Props) => {
           <span className="text-red-500">CULTURE</span>
         </div>
 
-        <h1 className="py-4 text-2xl font-semibold font-mono ">
-          Lorem ipsum dolor sit amet quis sint delectus
-        </h1>
+        <h1 className="py-4 text-2xl font-semibold font-mono ">{item.title}</h1>
         <p className=" text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, inventore
           voluptatibus quis sint delectus dignissimos, amet dolorum vero culpa,
