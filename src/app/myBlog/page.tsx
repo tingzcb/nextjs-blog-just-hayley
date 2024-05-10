@@ -11,9 +11,10 @@ import React from "react";
 const MyBlog = ({
   searchParams
 }: {
-  searchParams: { page: number | undefined };
+  searchParams: { page: number | undefined; cat: any };
 }) => {
   const page = searchParams.page || 1;
+  const cat = searchParams.cat;
   return (
     <div className="container mx-auto  ">
       <Button>
@@ -25,7 +26,7 @@ const MyBlog = ({
       <div className=" flex">
         <div className="flex-initial ">
           {" "}
-          <CardList page={page}></CardList>
+          <CardList page={page} cat={cat}></CardList>
         </div>
 
         <div className="flex-initial w-96">

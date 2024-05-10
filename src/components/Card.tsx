@@ -22,7 +22,7 @@ const Cards = ({ item, key }: Props) => {
 
       <div className="textContainer">
         <div className="detail">
-          <span>11.03.24 - </span>
+          <span>{item.createdAt} </span>
           <span className="text-red-500">CULTURE</span>
         </div>
 

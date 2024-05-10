@@ -18,10 +18,12 @@ import {
 export default function Home({
   searchParams
 }: {
-  searchParams: { page: number | undefined };
+  searchParams: { page: number | undefined; cat: any };
 }) {
   const page = searchParams.page || 1;
+  const cat = searchParams.cat;
   // console.log("page is ", page);
+  console.log("cat is ", cat);
   return (
     <div className="container mx-auto  ">
       <Featured></Featured>
@@ -30,7 +32,7 @@ export default function Home({
       <div className=" flex">
         <div className="flex-initial ">
           {" "}
-          <CardList page={page}></CardList>
+          <CardList page={page} cat={cat}></CardList>
         </div>
 
         <div className="flex-initial w-96">
