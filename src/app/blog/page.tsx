@@ -15,7 +15,10 @@ const Blogpage = ({
     <div className="content">
       <Menu></Menu>
       <div className=" ">
-        <h1 className=" text-center text-4xl bg-orange-400 text-white p-3">
+        <h1
+          className=" text-center text-4xl bg-orange-400 text-white p-3"
+          style={{ textTransform: "capitalize" }}
+        >
           {cat} Blog
         </h1>
       </div>
