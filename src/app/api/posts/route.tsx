@@ -5,7 +5,8 @@ export const GET = async (req: any) => {
   const { searchParams } = new URL(req.url);
   const page = parseInt(searchParams.get("page") || "1");
   const cat = searchParams.get("cat");
-  console.log("cat in posts api" + cat);
+
+  // console.log("cat in posts api" + cat);
 
   const POST_PER_PAGE = 2;
 

@@ -1,11 +1,33 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
+import useSWR from "swr";
+import { useSession } from "next-auth/react";
 
-type Props = {};
+type Props = {
+  postSlug: any;
+};
 
-const Comments = (props: Props) => {
-  const status = "authenticated";
+const fetcher = async (url: string) => {
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!res.ok) {
+    const error = new Error(data.message);
+    throw error;
+  }
+  return data;
+};
+
+const Comments = ({ postSlug }: Props) => {
+  const { status } = useSession();
+
+  const { data, isLoading } = useSWR(
+    `http://localhost:3000/api/comments?postSlug=${postSlug}`,
+    fetcher
+  );
+
   return (
     <div className="py-8 pr-4">
       <h1 className="title text-2xl font-semibold font-mono">Comments</h1>
@@ -23,28 +45,29 @@ const Comments = (props: Props) => {
       )}
 
       <div className="comments ">
-        <div className="comment">
-          <div className="user flex pt-8 ">
-            <div className="userImageContainer px-4">
-              <img
-                src="/Island.jpg"
-                alt="fill"
-                className="h-[3rem] w-[3rem] rounded-full object-cover object-center"
-              ></img>
-            </div>
-            <div className="userTextContainer text-sm">
-              <span className="">John Doe</span>
-              <br />
-              <span className="">01.01.2024</span>
-            </div>
-          </div>
+        <h1>this is comments for the article {postSlug}</h1>
+        {isLoading
+          ? "loading"
+          : data?.map((item: any) => (
+              <div className="comment" key={item._id}>
+                <div className="user flex pt-8 ">
+                  <div className="userImageContainer px-4">
+                    <img
+                      src={item.user.image}
+                      alt="fill"
+                      className="h-[3rem] w-[3rem] rounded-full object-cover object-center"
+                    ></img>
+                  </div>
+                  <div className="userTextContainer text-sm">
+                    <span className="">{item.user.name}</span>
+                    <br />
+                    <span className="">{item.createdAt.substring(0, 10)}</span>
+                  </div>
+                </div>
 
-          <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            ab dolores libero consequuntur nihil tenetur non deleniti ipsa!
-            Vero, numquam.
-          </p>
-        </div>
+                <p className="">{item.desc}</p>
+              </div>
+            ))}
       </div>
     </div>
   );

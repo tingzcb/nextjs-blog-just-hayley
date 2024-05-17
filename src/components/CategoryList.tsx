@@ -17,6 +17,7 @@ const getData = async () => {
 
 const CategoryList = async (props: Props) => {
   const data = await getData();
+  console.log("categories test " + data);
   return (
     <div className="container">
       <h1 className=" py-4 text-2xl font-semibold font-mono ">

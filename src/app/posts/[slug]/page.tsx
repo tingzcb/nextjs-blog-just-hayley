@@ -68,7 +68,7 @@ const SinglePage = async ({ params }: Props) => {
             dangerouslySetInnerHTML={{ __html: data?.desc }}
           ></div>
 
-          <Comments></Comments>
+          <Comments postSlug={slug}></Comments>
         </div>
         <div className="sideMenu flex-initial w-96">
           <MenuForPopular></MenuForPopular>
