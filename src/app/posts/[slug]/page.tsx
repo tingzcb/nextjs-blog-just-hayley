@@ -24,7 +24,7 @@ type Props = {
 const SinglePage = async ({ params }: Props) => {
   const { slug } = params;
   const data = await getData(slug);
-  console.log(data);
+  //console.log(data);
   // console.log(data.title);
   return (
     <div className="container">
