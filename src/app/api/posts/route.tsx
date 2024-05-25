@@ -37,6 +37,7 @@ export const GET = async (req: any) => {
 
 //create a post
 export const POST = async (req: any) => {
+  //varify user
   const session = await getAuthSession();
   if (!session) {
     return new NextResponse(

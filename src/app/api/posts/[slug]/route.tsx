@@ -6,8 +6,14 @@ export const GET = async (req: any, { params }: any) => {
   const { slug } = params;
 
   try {
-    const post = await prisma.post.findUnique({
+    // const post = await prisma.post.findUnique({
+    //   where: { slug: slug },
+    //   include: { user: true }
+    // });
+
+    const post = await prisma.post.update({
       where: { slug: slug },
+      data: { views: { increment: 1 } },
       include: { user: true }
     });
 
