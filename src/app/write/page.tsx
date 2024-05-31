@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { ImagePlus, MonitorPlay, Upload } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.bubble.css";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.bubble.css";
 import {
   getStorage,
   ref,
@@ -13,23 +13,30 @@ import {
 import { app } from "@/utils/firebase";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 
 const storage = getStorage(app);
 type Props = {};
 
 const WritePage = (props: Props) => {
   const [value, setValue] = useState("");
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
   const [media, setMedia] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
 
   const { status } = useSession();
+
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
   const router = useRouter();
 
   useEffect(() => {
     const upload = () => {
-      const name = new Date().getTime + file.name;
+      if (!file) {
+        console.error("File is null or undefined");
+        return;
+      }
+      const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, name);
 
       const uploadTask = uploadBytesResumable(storageRef, file);

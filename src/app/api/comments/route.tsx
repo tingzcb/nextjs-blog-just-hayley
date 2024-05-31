@@ -30,6 +30,8 @@ export const GET = async (req: any) => {
 //create a comment
 export const POST = async (req: any) => {
   const session = await getAuthSession();
+  const { user } = await getAuthSession();
+
   if (!session) {
     return new NextResponse(
       JSON.stringify({ message: "You must be logged in." }),
@@ -44,7 +46,7 @@ export const POST = async (req: any) => {
     const comment = await prisma.comment.create({
       data: {
         ...body,
-        userEmail: session.user?.email
+        userEmail: user?.email
       }
     });
     return new NextResponse(JSON.stringify(comment), { status: 200 });
