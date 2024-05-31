@@ -25,7 +25,10 @@ const CategoryList = async (props: Props) => {
       </h1>
       <div className="categories grid grid-cols-6 gap-4">
         {data?.map((item: any) => (
-          <div className="category bg-slate-500 w-fit py-2 px-4 rounded-md hover:-translate-y-[2px]">
+          <div
+            key={item._id}
+            className="category bg-slate-500 w-fit py-2 px-4 rounded-md hover:-translate-y-[2px]"
+          >
             <Link
               href={`/blog?cat=${item.title}`}
               className="flex flex-row gap-2 text-lg font-semibold font-mono "
