@@ -9,7 +9,7 @@ const Featured = (props: Props) => {
   return (
     <div className="container  my-0 mx-auto  text-center">
       <h1 className="title p-6 text-4xl">
-        <b>Hey, hayley's blogs are here!</b> Discover my creative designs
+        <b>Hey, hayley&apos;s blogs are here!</b> Discover my creative designs
         please!
       </h1>
       <div className="post grid grid-cols-3 gap-4">
