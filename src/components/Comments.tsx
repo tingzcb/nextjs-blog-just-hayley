@@ -33,7 +33,7 @@ const Comments = ({ postSlug }: Props) => {
 
   const handleSubmission = async () => {
     console.log("desc");
-    await fetch("/api/comments", {
+    await fetch(`${process.env.NEXTAUTH_URL}/api/comments`, {
       method: "POST",
       body: JSON.stringify({ desc, postSlug })
     });
