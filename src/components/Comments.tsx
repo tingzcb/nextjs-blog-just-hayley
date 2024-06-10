@@ -25,7 +25,7 @@ const Comments = ({ postSlug }: Props) => {
   const { status } = useSession();
 
   const { data, mutate, isLoading } = useSWR(
-    `${process.env.NEXTAUTH_URL}/api/comments?postSlug=${postSlug}`,
+    `/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 
@@ -33,7 +33,7 @@ const Comments = ({ postSlug }: Props) => {
 
   const handleSubmission = async () => {
     console.log("desc");
-    await fetch(`${process.env.NEXTAUTH_URL}/api/comments`, {
+    await fetch("/api/comments", {
       method: "POST",
       body: JSON.stringify({ desc, postSlug })
     });
