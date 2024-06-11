@@ -28,12 +28,12 @@ const MyBlog = ({
           {" "}
           <CardList page={page} cat={cat}></CardList>
         </div>
-
+        {/* 
         <div className="flex-initial w-96">
           <MenuForPopular></MenuForPopular>
           <SideCategories></SideCategories>
           <PopularMenu></PopularMenu>
-        </div>
+        </div> */}
       </div>
     </div>
   );
