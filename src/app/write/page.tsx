@@ -172,7 +172,7 @@ const WritePage = (props: Props) => {
       <ReactQuill
         className="border-solid border-2 border-indigo-600 "
         value={value}
-        // theme="bubble"
+        theme="snow"
         onChange={setValue}
         placeholder="Tell your story..."
       ></ReactQuill>
