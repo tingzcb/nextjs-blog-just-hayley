@@ -130,6 +130,9 @@ const WritePage = (props: Props) => {
       />
       <div>
         <Select onValueChange={(e: any) => setCatSlug(e.target.value)}>
+          <SelectTrigger className="w-[280px]">
+            <SelectValue placeholder="Select a category" />
+          </SelectTrigger>
           <SelectContent>
             <SelectItem value="style">style</SelectItem>
             <SelectItem value="fashion">fashion</SelectItem>
