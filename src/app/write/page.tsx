@@ -129,7 +129,7 @@ const WritePage = (props: Props) => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <div>
-        <Select onValueChange={(e: any) => setCatSlug(e.target.value)}>
+        <Select onValueChange={(value) => setCatSlug(value)}>
           <SelectTrigger className="w-[280px]">
             <SelectValue placeholder="Select a category" />
           </SelectTrigger>
