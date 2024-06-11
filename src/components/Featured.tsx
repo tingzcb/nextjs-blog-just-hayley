@@ -13,7 +13,7 @@ const Featured = (props: Props) => {
         please!
       </h1>
       <div className="post grid  md:grid-cols-3 gap-4">
-        <div className="imgContainer ">
+        <div className="imgContainer items-center">
           <img
             src="/glass.jpeg"
             alt="feature image"
