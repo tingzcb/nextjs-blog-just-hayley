@@ -24,7 +24,9 @@ const AuthLinks = (props: Props) => {
       ) : (
         <>
           <Link className="max-md:hidden" href="/write">
-            Write A New Blog
+            <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
+              Write A New Blog
+            </p>
           </Link>
           <Button
             className="max-md:hidden"
