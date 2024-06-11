@@ -41,7 +41,7 @@ const Navbar = (props: Props) => {
             Just Hayley
           </p>
         </Link>
-
+        {/* 
         <Link
           href={"/merchandise"}
           className="flex items-center gap-2 max-md:hidden"
@@ -49,7 +49,7 @@ const Navbar = (props: Props) => {
           <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] md:block dark:border-white">
             商品 merchandise
           </p>
-        </Link>
+        </Link> */}
 
         <Link
           href={"/myBlog"}
@@ -59,7 +59,7 @@ const Navbar = (props: Props) => {
             my blog for life
           </p>
         </Link>
-
+        {/* 
         <Link
           href={"/aboutMe"}
           className="flex items-center gap-2 max-md:hidden"
@@ -76,7 +76,7 @@ const Navbar = (props: Props) => {
           <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] md:block dark:border-white">
             订阅 mailchimp
           </p>
-        </Link>
+        </Link> */}
 
         {/* <Link href={"/login"} className="flex items-center gap-2">
           <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] md:block dark:border-white">
