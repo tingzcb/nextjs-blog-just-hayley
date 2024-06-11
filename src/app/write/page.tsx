@@ -5,6 +5,16 @@ import React, { useEffect, useState } from "react";
 // import ReactQuill from "react-quill";
 // import "react-quill/dist/quill.bubble.css";
 import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select";
+
+import {
   getStorage,
   ref,
   uploadBytesResumable,
@@ -119,7 +129,18 @@ const WritePage = (props: Props) => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <div>
-        <select
+        <Select onValueChange={(e: any) => setCatSlug(e.target.value)}>
+          <SelectContent>
+            <SelectItem value="style">style</SelectItem>
+            <SelectItem value="fashion">fashion</SelectItem>
+            <SelectItem value="food">food</SelectItem>
+            <SelectItem value="culture">culture</SelectItem>
+            <SelectItem value="travel">travel</SelectItem>
+            <SelectItem value="coding">coding</SelectItem>
+          </SelectContent>
+        </Select>
+
+        {/* <select
           className={"select"}
           onChange={(e) => setCatSlug(e.target.value)}
         >
@@ -129,7 +150,7 @@ const WritePage = (props: Props) => {
           <option value="culture">culture</option>
           <option value="travel">travel</option>
           <option value="coding">coding</option>
-        </select>
+        </select> */}
       </div>
       <div className="editor py-4 px-4 flex justify-start gap-4">
         <input
