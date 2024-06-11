@@ -69,7 +69,7 @@ const AuthLinks = (props: Props) => {
                 Just Hayley
               </p>
             </Link>
-            <Link
+            {/* <Link
               href={"/merchandise"}
               onClick={() => {
                 setOpen(false);
@@ -79,7 +79,7 @@ const AuthLinks = (props: Props) => {
               <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
                 商品 merchandise
               </p>
-            </Link>
+            </Link> */}
             <Link
               href={"/myBlog"}
               onClick={() => {
@@ -91,7 +91,7 @@ const AuthLinks = (props: Props) => {
                 my blog for life
               </p>
             </Link>
-            <Link
+            {/* <Link
               href={"/aboutMe"}
               onClick={() => {
                 setOpen(false);
@@ -116,7 +116,7 @@ const AuthLinks = (props: Props) => {
               >
                 订阅 mailchimp
               </p>
-            </Link>
+            </Link> */}
             {status === "unauthenticated" ? (
               <Link
                 href="/login"
