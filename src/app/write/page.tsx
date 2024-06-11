@@ -128,7 +128,7 @@ const WritePage = (props: Props) => {
         placeholder="Title"
         onChange={(e) => setTitle(e.target.value)}
       />
-      <div>
+      <div className="m-4">
         <Select onValueChange={(value) => setCatSlug(value)}>
           <SelectTrigger className="w-[280px]">
             <SelectValue placeholder="Select a category" />
@@ -172,7 +172,7 @@ const WritePage = (props: Props) => {
       <ReactQuill
         className="border-solid border-2 border-indigo-600 "
         value={value}
-        theme="bubble"
+        // theme="bubble"
         onChange={setValue}
         placeholder="Tell your story..."
       ></ReactQuill>
