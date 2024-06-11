@@ -30,7 +30,7 @@ const Cards = ({ item, key }: Props) => {
 
         <div className="py-4">
           <Link href={`/posts/${item.slug}`}>
-            <p className="underline underline-offset-4 font-semi  hover:-translate-y-[2px]">
+            <p className="underline underline-offset-4 font-semi text-sky-900  hover:-translate-y-[2px]">
               {" "}
               Read More
             </p>
