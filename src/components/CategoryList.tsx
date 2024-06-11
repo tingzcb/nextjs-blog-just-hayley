@@ -23,7 +23,7 @@ const CategoryList = async (props: Props) => {
       <h1 className=" py-4 text-2xl font-semibold font-mono ">
         Popular Categories
       </h1>
-      <div className="categories grid grid-cols-6 gap-4">
+      <div className="categories grid md:grid-cols-3 lg:grid-cols-6 gap-4">
         {data?.map((item: any) => (
           <div
             key={item._id}
