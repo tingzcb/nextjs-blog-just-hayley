@@ -38,7 +38,7 @@ const CategoryList = async (props: Props) => {
                 <img
                   className="h-[2.2rem] w-[2.2rem] rounded-full object-cover object-center"
                   src={item.img}
-                  alt="facebook image"
+                  alt="category image"
                 />
               )}
               {item.title}
