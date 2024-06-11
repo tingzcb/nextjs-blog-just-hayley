@@ -8,7 +8,7 @@ type Props = {
 
 const Cards = ({ item, key }: Props) => {
   return (
-    <div className="grid grid-cols-2  p-4 my-2 rounded-lg gap-8" key={key}>
+    <div className="  p-4 my-2 rounded-lg gap-8" key={key}>
       <div className="imageContainer">
         {item.img && (
           <img
