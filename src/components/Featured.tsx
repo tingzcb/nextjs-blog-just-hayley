@@ -13,7 +13,7 @@ const Featured = (props: Props) => {
         please!
       </h1>
       <div className="post grid  md:grid-cols-3 gap-4">
-        <div className="imgContainer items-center">
+        <div className="imgContainer flex justify-center">
           <img
             src="/glass.jpeg"
             alt="feature image"
@@ -21,7 +21,7 @@ const Featured = (props: Props) => {
           ></img>
         </div>
 
-        <div className="txtContainer col-span-2  ">
+        <div className="txtContainer col-span-2  text-left">
           <h1 className="postTitle p-6  ">
             {" "}
             Code with passion, learn with curiosity, and create with purpose.
