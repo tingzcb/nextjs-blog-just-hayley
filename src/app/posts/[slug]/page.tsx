@@ -71,9 +71,9 @@ const SinglePage = async ({ params }: Props) => {
           <Comments postSlug={slug}></Comments>
         </div>
         <div className="sideMenu flex-initial w-96">
-          <MenuForPopular></MenuForPopular>
+          {/* <MenuForPopular></MenuForPopular>
           <SideCategories></SideCategories>
-          <PopularMenu></PopularMenu>
+          <PopularMenu></PopularMenu> */}
         </div>
       </div>
     </div>
