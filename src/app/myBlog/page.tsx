@@ -16,7 +16,7 @@ const MyBlog = ({
   const page = searchParams.page || 1;
   const cat = searchParams.cat || "";
   return (
-    <div className="container mx-auto  ">
+    <div className="container mx-auto ">
       <Button>
         <Link href={"/write"}> Create new Blog</Link>
       </Button>

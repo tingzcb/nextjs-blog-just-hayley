@@ -20,7 +20,7 @@ type Props = { page: number; cat: any };
 const CardList = async ({ page, cat }: Props) => {
   const { posts, count } = await getData(page, cat);
 
-  const POST_PER_PAGE = 2;
+  const POST_PER_PAGE = 10;
   // const hasPre = POST_PER_PAGE * (page - 1) > 0;
   const hasPre = page > 1;
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
@@ -35,6 +35,7 @@ const CardList = async ({ page, cat }: Props) => {
           <Cards item={item} key={item._id}></Cards>
         ))}
       </div>
+
       <Pagination page={page} hasNext={hasNext} hasPre={hasPre}></Pagination>
     </div>
   );

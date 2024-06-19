@@ -9,7 +9,7 @@ const Pagination = ({ page, hasNext, hasPre }: Props) => {
   const router = useRouter();
 
   return (
-    <div className="container relative flex justify-between">
+    <div className="container my-4 relative flex justify-between">
       <Button
         className="w-28  bg-red-600"
         onClick={() => {
