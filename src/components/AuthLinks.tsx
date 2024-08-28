@@ -18,7 +18,7 @@ const AuthLinks = (props: Props) => {
       {status === "unauthenticated" ? (
         <Link href={"/login"} className=" items-center gap-2 max-md:hidden">
           <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
-            登录 login
+            Login
           </p>
         </Link>
       ) : (
@@ -90,7 +90,18 @@ const AuthLinks = (props: Props) => {
               className="flex items-center gap-2"
             >
               <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
-                my blog for life
+                Blogs
+              </p>
+            </Link>
+            <Link
+              href={"/project"}
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="flex items-center gap-2"
+            >
+              <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
+                My Projects
               </p>
             </Link>
             {/* <Link
@@ -126,7 +137,9 @@ const AuthLinks = (props: Props) => {
                   setOpen(false);
                 }}
               >
-                Login
+                <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px]  dark:border-white">
+                  Login
+                </p>
               </Link>
             ) : (
               <>
