@@ -34,7 +34,7 @@ const AuthLinks = (props: Props) => {
               signOut();
             }}
           >
-            Logout1
+            Logout
           </Button>
         </>
       )}
@@ -58,7 +58,8 @@ const AuthLinks = (props: Props) => {
           )}
         </Button>
         {open && (
-          <div className="responsiveMenu ">
+          // responsiveMenu
+          <div className=" flex flex-col space-y-4">
             {" "}
             <Link
               href={"/"}
