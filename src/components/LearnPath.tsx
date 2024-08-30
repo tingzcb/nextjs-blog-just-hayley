@@ -6,7 +6,7 @@ const LearnPath = () => {
       <div>Learn Path</div>
       <div className="flex flex-col items-center">
         <div>
-          <img src="/illustration/illustration-thank-you.svg" />
+          <img src="" />
         </div>
         <div className="py-1 px-5 flex justify-center items-center rounded-[22.5rem] bg-fem-darkblue mt-8">
           <p className="font-normal font-Overpass text-center text-sm md:text-[0.938rem] text-fem-orange"></p>
