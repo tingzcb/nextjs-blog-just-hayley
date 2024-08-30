@@ -4,11 +4,11 @@ import React from "react";
 
 const MyProject = () => {
   return (
-    <>
+    <div>
       <LearnPath></LearnPath>
-      <div>ProjectPage</div>;
+      <div>ProjectPage</div>
       <ShowCase />
-    </>
+    </div>
   );
 };
 
